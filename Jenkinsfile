@@ -16,25 +16,11 @@ pipeline {
         stage('Build') {
             steps {
                 // Your build steps here
-                sh "python3 gitstats.py"  // Replace with your actual build command
+                dir('/app') {
+                    // Run the Python file gitstats.py
+                    sh "python3 gitstats.py"  // Replace with your actual build command
+                }
             }
         }
-
-
-        // Add more stages as needed
-    }
-
-    post {
-        success {
-            // Your success post-build steps here
-            echo 'Build and tests passed!'
-        }
-
-        failure {
-            // Your failure post-build steps here
-            echo 'Build or tests failed!'
-        }
-
-        // Add more post-build conditions as needed
     }
 }
