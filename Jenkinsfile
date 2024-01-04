@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'buildcontainer:1.1'
-            label 'docker'  // Optional label to restrict the agent to nodes with this label
         }
     }
 
