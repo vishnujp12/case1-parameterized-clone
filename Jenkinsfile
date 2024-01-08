@@ -16,7 +16,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Run the Python script without changing the directory
-                sh "python3 /app/gitstats.py"
+                sh "python3 /app/git_stats.py"
             }
         }
     }
