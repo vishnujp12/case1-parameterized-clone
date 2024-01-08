@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'buildcontainer:1.3'
+            image 'buildcontainer:1.5'
         }
     }
 
