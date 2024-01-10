@@ -20,5 +20,16 @@ pipeline {
             }
         }
     }
+
+    post {
+        always {
+            // This block will be executed after all stages, regardless of success or failure
+
+            // Sleep for 2 minutes (120 seconds)
+            script {
+                sh 'sleep 500'
+            }
+        }
+    }
 }
 
